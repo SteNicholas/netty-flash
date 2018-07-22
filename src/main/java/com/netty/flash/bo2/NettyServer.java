@@ -38,7 +38,7 @@ public class NettyServer {
      * ChannelOption.SO_KEEPALIVE表示是否开启TCP底层心跳机制,true为开启
      * ChannelOption.SO_REUSEADDR表示端口释放后立即就可以被再次使用,因为一般来说,一个端口释放后会等待两分钟之后才能再被使用
      * ChannelOption.TCP_NODELAY表示是否开始Nagle算法,true表示关闭,false表示开启,通俗地说,如果要求高实时性,有数据发送时就马上发送,就关闭,如果需要减少发送次数减少网络交互就开启
-     * option()方法给服务端channel一些TCP底层相关的属性:
+     * option()方法给服务端channel设置一些TCP底层相关的属性:
      * ChannelOption.SO_BACKLOG表示系统用于临时存放已完成三次握手的请求的队列的最大长度,如果连接建立频繁,服务器处理创建新连接较慢,适当调大该参数
      *
      * @param args
